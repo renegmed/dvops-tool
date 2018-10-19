@@ -1,0 +1,35 @@
+Encryption and Authentication
+
+Encryption is used to protect sensitive
+information so that it can only be
+understood by the intended party
+
+Authentication is used only to verify the 
+source of information 
+
+
+Basic Authentication
+
+Basic authentication uses an HTTP header
+to supply credentials for RES API calls 
+
+Credentials are not encrypted
+
+curl -I -v https://httpbin.org/basic 
+
+
+Token Authentication
+
+Token authentication uses specially
+generated tokens that give limited and 
+temporary access to API calls based on a 
+user's authentication credentials
+
+Why Tokens?
+
+Credentials are temporary 
+Tokens can be revoked
+Tokens can be rotated 
+Access can be limited
+
+

@@ -1,0 +1,44 @@
+
+Requests
+
+HTTP Requests in Go
+
+The Go standard library includes the HTTP 
+package which is used for sending and 
+receiving 
+
+You can create a client instance or make 
+simple requests with a default client 
+
+
+Headers 
+
+HTTPHeaders
+
+Headers are used to provide metadata 
+about HTTP requests 
+
+We will be using headers primarily for 
+authentication credentials
+
+
+Processing Content 
+
+REST API Content
+
+REST API requests and responses typically
+have JSON formatted content 
+
+Go includes JSON support for marshaling and 
+unmarshaling this content
+
+
+Error Handling
+
+REST APIs have typical error responses 
+as any HTTP request might have 
+
+Often with REST APIs there will be 
+additional error information included 
+in the body of the response 
+
