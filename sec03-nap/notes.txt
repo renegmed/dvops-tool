@@ -1,0 +1,11 @@
+
+Build nap app
+
+$ go install ./cmd/...
+$ nap -h
+$ nap -list
+
+Test
+
+$ go test -v
+
