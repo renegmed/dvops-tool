@@ -9,6 +9,8 @@ type AuthBasic struct {
 	Password string
 }
 
+// API requires different authentication thus may have different implementation
+// of this interface
 type Authentication interface {
 	AuthorizationHeader() string // "basic <based64-encoded string>"
 }
