@@ -4,7 +4,7 @@ package main
 
 	$ go install ./cmd/pork
 	$ pork search topic:ruby
-
+	$ port docs myrepository
 
 */
 
@@ -26,4 +26,5 @@ func init() {
 		Short: "Project Forking Tool for Github",
 	}
 	rootCmd.AddCommand(pork.SearchCmd)
+	rootCmd.AddCommand(pork.DocsCmd)
 }
