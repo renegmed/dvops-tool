@@ -4,8 +4,10 @@ package main
 
 	$ go install ./cmd/pork
 	$ pork search topic:ruby
-	$ port docs myrepository
+	$ pork docs myrepository
 
+	$ pork clone devops_tools/sec05-design-cli
+	$ pork clone --help
 */
 
 import (
@@ -27,4 +29,5 @@ func init() {
 	}
 	rootCmd.AddCommand(pork.SearchCmd)
 	rootCmd.AddCommand(pork.DocsCmd)
+	rootCmd.AddCommand(pork.CloneCmd)
 }

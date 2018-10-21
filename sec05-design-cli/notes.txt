@@ -7,3 +7,12 @@ documentation for projects on GitHub
 We can easily look for information we are
 interested in learning
 
+
+Clone Feature
+
+The clone feature will allow us to clone 
+repositories from GitHub locally 
+
+We will use the third party library go-git 
+to implement cloning
+
