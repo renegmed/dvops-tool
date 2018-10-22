@@ -5,6 +5,8 @@ import (
 	"path/filepath"
 	"strings"
 
+	"gopkg.in/src-d/go-git.v4/plumbing"
+
 	git "gopkg.in/src-d/go-git.v4"
 )
 
@@ -42,4 +44,23 @@ func (g *GHRepo) Clone(dest string) error {
 	g.repo = repo
 	g.RepoDir = fullPath
 	return nil
+}
+
+func (g *GHRepo) Checkout(ref string, create bool) error {
+	opts := &git.CheckoutOptions{
+		Branch: plumbing.ReferenceName(fmt.Sprintf("refs/heads/%s", ref)),
+		Create: create,
+	}
+	if create {
+		head, err := g.repo.Head()
+		if err != nil {
+			return err
+		}
+		opts.Hash = head.Hash()
+	}
+	tree, err := g.repo.Worktree()
+	if err != nil {
+		return err
+	}
+	return tree.Checkout(opts)
 }

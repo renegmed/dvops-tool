@@ -10,7 +10,11 @@ package main
 	$ pork clone devops_tools/sec05-design-cli --ref develop --create
 	$ pork clone --help
 
+	$ pork clone mspaulding06/nap --ref testing --create
+
 	$ pork fork myrepository
+
+
 */
 
 import (
