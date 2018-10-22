@@ -1,2 +1,6 @@
 package: devops_tools/sec05-design-cli
-import: []
+import:
+- package: gopkg.in/src-d/go-git.v4
+  version: ~4.7.1
+- package: github.com/spf13/viper
+  version: ^1.2.1

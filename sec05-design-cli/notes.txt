@@ -1,4 +1,6 @@
 
+Section 5 Topics
+
 Docs Feature
 
 This feature will allow us to read
@@ -15,4 +17,42 @@ repositories from GitHub locally
 
 We will use the third party library go-git 
 to implement cloning
+
+
+Fork Feature 
+
+This feature will allow us to fork GitHub 
+repositories so that we can have our own 
+copy in our GitHub profile
+
+
+
+Section 6 topics
+
+    Designing the API
+
+    Implementation with Nap
+
+    Writing tests
+
+
+
+GitHub Library API
+
+Nap is our library for interacting with REST APIs
+
+We are going to use it in this section to
+interact with GitHub by creating a GitHub 
+API layer 
+
+
+
+$ glide get gopkg.in/src-d/go-git.v4
+
+$ glide get github.com/spf13/viper
+
+$ glide update
+
+To clone
+$ pork clone mspaulding06/nap --ref master --create
 

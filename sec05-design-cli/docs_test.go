@@ -4,7 +4,7 @@ import "testing"
 
 func TestGetRepositoryReadme(t *testing.T) {
 	content := GetRepositoryReadme("myrepository")
-	if content != "myrepository" {
+	if content != "docs - myrepository" {
 		t.Fail()
 	}
 }

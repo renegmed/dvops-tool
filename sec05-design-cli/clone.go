@@ -1,9 +1,11 @@
 package pork
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var CloneCmd = &cobra.Command{
@@ -23,6 +25,14 @@ var ref string
 var create bool
 
 func CloneRepository(repository string, ref string, shouldCreate bool) error {
+	repo, err := NewGHRepo(repository)
+	if err != nil {
+		return err
+	}
+	if err := repo.Clone(viper.GetString("location")); err != nil {
+		return err
+	}
+	fmt.Printf("Cloned repository to %/s\n", repo.RepoDir)
 	return nil
 }
 
