@@ -15,6 +15,7 @@ func GitHubAPI() *nap.API {
 		token := viper.GetString("token")          // retrieve token field from the config file pork.yaml
 		api.SetAuth(nap.NewAuthToken(token))
 		api.AddResource("fork", GetForkResource())
+		api.AddResource("search", GetSearchResource())
 	}
 	return api
 }

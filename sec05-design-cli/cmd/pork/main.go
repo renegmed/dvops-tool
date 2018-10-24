@@ -14,7 +14,9 @@ package main
 
 	$ pork fork myrepository
 
+	$ pork search topic:go
 
+	$ pork clone avelino/awesome-go
 */
 
 import (
