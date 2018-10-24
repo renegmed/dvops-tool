@@ -1,5 +1,5 @@
 hash: 9c22669235b182ac42acbd4d52bdd23aa5df74aa2c4f9fc5f39cd6fbf80b8237
-updated: 2018-10-21T22:03:25.7179-04:00
+updated: 2018-10-22T15:09:16.639969-04:00
 imports:
 - name: github.com/emirpasic/gods
   version: f6c17b524822278a87e3b3bd809fec33b51f5b46
@@ -10,6 +10,20 @@ imports:
   - trees
   - trees/binaryheap
   - utils
+- name: github.com/fsnotify/fsnotify
+  version: c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9
+- name: github.com/hashicorp/hcl
+  version: 65a6292f0157eff210d03ed1bf6c59b190b8b906
+  subpackages:
+  - hcl/ast
+  - hcl/parser
+  - hcl/printer
+  - hcl/scanner
+  - hcl/strconv
+  - hcl/token
+  - json/parser
+  - json/scanner
+  - json/token
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/jbenet/go-context
@@ -18,16 +32,30 @@ imports:
   - io
 - name: github.com/kevinburke/ssh_config
   version: 81db2a75821ed34e682567d48be488a1c3121088
+- name: github.com/magiconair/properties
+  version: c2353362d570a7bfa228149c62842019201cfb71
 - name: github.com/mitchellh/go-homedir
   version: ae18d6b8b3205b561c79e8e5f69bff09736185f4
+- name: github.com/mitchellh/mapstructure
+  version: 3536a929edddb9a5b34bd6861dc4a9647cb459fe
 - name: github.com/pelletier/go-buffruneio
   version: de1592c34d9c6055a32fc9ebe2b3ee50ca468ebe
+- name: github.com/pelletier/go-toml
+  version: 81a861c69d25a841d0c4394f0e6f84bc8c5afae0
 - name: github.com/sergi/go-diff
   version: da645544ed44df016359bd4c0e3dc60ee3a0da43
   subpackages:
   - diffmatchpatch
+- name: github.com/spf13/afero
+  version: d40851caa0d747393da1ffb28f7f9d8b4eeffebd
+  subpackages:
+  - mem
+- name: github.com/spf13/cast
+  version: efb632f0f61348654b631fd11da5ff457a5ca2ef
 - name: github.com/spf13/cobra
   version: 7b2c5ac9fc04fc5efafb60700713d4fa609b777b
+- name: github.com/spf13/jwalterweatherman
+  version: 103a6da826d08544f49833dabd4f1cdf8a1038bb
 - name: github.com/spf13/pflag
   version: 298182f68c66c05229eb03ac171abe6e309ee79a
 - name: github.com/spf13/viper
@@ -64,8 +92,9 @@ imports:
   subpackages:
   - context
 - name: golang.org/x/sys
-  version: eda9bb28ed513021f3e6a2a361031adc3d8a6301
+  version: 8a28ead16f52c8aaeffbf79239b251dfdf6c4f96
   subpackages:
+  - unix
   - windows
 - name: golang.org/x/text
   version: 4d1c5fb19474adfe9562c9847ba425e7da817e81
@@ -123,4 +152,6 @@ imports:
   - utils/merkletrie/noder
 - name: gopkg.in/warnings.v0
   version: ec4a0fea49c7b46c2aeb0b51aac55779c607e52b
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
 testImports: []

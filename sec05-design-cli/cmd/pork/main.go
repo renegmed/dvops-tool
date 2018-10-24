@@ -19,6 +19,7 @@ package main
 
 import (
 	"devops_tools/sec05-design-cli"
+	"fmt"
 	"os"
 
 	"github.com/spf13/viper"
@@ -50,7 +51,11 @@ func init() {
 	// about configuration file formats; you want to focus on building
 	// awesome software. Viper is here to help with that.
 	viper.SetDefault("location", os.Getenv("HOME"))
-	viper.SetConfigName("pork")
-	viper.AddConfigPath(".")
+	viper.SetConfigName("pork") // refers to ./pork.yaml file
+	viper.AddConfigPath(".")    // refers to ./pork.yaml file
 	viper.ReadInConfig()
+	if err := viper.ReadInConfig(); err != nil {
+		fmt.Println("No configuration file found")
+	}
+	viper.SetDefault("location", os.Getenv("HOME")) // see pork.yaml file for 'location' setup. If none, this set to user's home directory
 }

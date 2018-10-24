@@ -56,3 +56,10 @@ $ glide update
 To clone
 $ pork clone mspaulding06/nap --ref master --create
 
+
+Implementaion with Nap
+
+Here we are going to provide all the 
+implementation for the various 
+features of the Pork tool using the Nap
+REST library that we have created 
